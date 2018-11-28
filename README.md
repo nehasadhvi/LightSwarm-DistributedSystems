@@ -10,6 +10,7 @@
   <li>Raspberry Pi is connected with a button. When pushed, it resets all ESP 8266 devices and turns on its yellow LED</li>
   <li>The system works with 2-4 ESP 8266 devices dynamically</li>
 </ul>
+
   ### IoT Cloud Connection
 <ul>
   <li>Then I used Node-RED to connect Raspberry Pi to Google Firebase. The data are then sent from Raspberry Pi to Firebase, and saved on a database</li>
