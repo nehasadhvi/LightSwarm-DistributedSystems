@@ -2,6 +2,7 @@
 
 <ul>
   <li>This project is a distributed system of ESP8266 devices which can communicate with each other by sending broadcast messages to exchange RGB-light sensor readings. The device with the highest reading, will then forward the readings to the Raspberry Pi as the server</li>
+  <li>I used WiFi network to connect between ESP8266 and Raspberry Pi</li>
   <li>Each ESP 8266 device has an RGB sensor and broadcasts its readings to others whenever the network is silent for 100ms. ESP devices have (green) LEDs connected, which shows different brightness (using PWM) according to the light sensor readings</li>
   <li>One of them (who has the highest reading) will become the master that will send the log data to Raspberry Pi as the server. The Master will light up a red LED, in addition to its green LED</li>
   <li>Raspberry Pi will display the Master's photocell data trace on its window screen</li>
