@@ -56,7 +56,7 @@ pip install netifaces
 
 ## Authors
 
-* **Neha Sadhvi** - *Initial work* - [neheasadhvi](https://github.com/nehasadhvi)
+* **Neha Sadhvi** - *Initial work* - [nehasadhvi](https://github.com/nehasadhvi)
 
 ## License
 
