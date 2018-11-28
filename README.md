@@ -1,5 +1,6 @@
 # LightSwarm-DistributedSystems
-
+  
+  ### IoT Distributed System Connection
 <ul>
   <li>This project is a distributed system of ESP8266 devices which can communicate with each other by sending broadcast messages to exchange RGB-light sensor readings. The device with the highest reading, will then forward the readings to the Raspberry Pi as the server</li>
   <li>I used WiFi network to connect between ESP8266 and Raspberry Pi</li>
@@ -8,11 +9,12 @@
   <li>Raspberry Pi will display the Master's photocell data trace on its window screen</li>
   <li>Raspberry Pi is connected with a button. When pushed, it resets all ESP 8266 devices and turns on its yellow LED</li>
   <li>The system works with 2-4 ESP 8266 devices dynamically</li>
+</ul>
   ### IoT Cloud Connection
+<ul>
   <li>Then I used Node-RED to connect Raspberry Pi to Google Firebase. The data are then sent from Raspberry Pi to Firebase, and saved on a database</li>
   <li>Once they are in the Firebase, we can use any software to access it anytime from anywhere for any purpose. We can also use Node-RED to send some live messages to your phone in real time</li>
   <li>Here, I am sending data from Firebase whenever the database is updated, to Slack installed on smart phone. The data is also extracted from the Firebase to our laptop for further analysis.</li>
-
 </ul>
 
 ## Getting Started
