@@ -46,6 +46,11 @@ netifaces Library -
 pip install netifaces
 ```
 
+To connect your laptop/PC to your RaspberryPi, use VNC. Follow the steps mentioned in the below link to download latest version of VNC on your device - 
+```
+https://www.raspberrypi.org/documentation/remote-access/vnc/
+```
+
 ## Built With
 
 * [C++] - Used to code ESP8266 aurduino acting as Light Swarms
