@@ -55,9 +55,10 @@ https://www.raspberrypi.org/documentation/remote-access/vnc/
 
 * [C++] - Used to code ESP8266 aurduino acting as Light Swarms
 * [Python] - Used to code Raspberry Pi acting as base station for the Light Swarms
+* [NodeJS] - Used to display the operated data obtained from Firebase
 * [Node-RED](https://flows.nodered.org/node/node-red-contrib-firebase) - Used to connect base station to Firebase
 * [Firebase](https://firebase.google.com/products/realtime-database/) - Used store data received by base station into database
-* [Slack] - Used to obtain data from Firebase and display those data on real time on smart phones
+* [Slack] - Used to display obtained real-time data from RaspberryPi on smart phones
 
 ## Authors
 
