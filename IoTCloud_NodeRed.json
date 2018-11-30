@@ -1,0 +1,89 @@
+[
+    {
+        "id":"163dc298.bc503d",
+        "type":"tab",
+        "label":"Flow 1",
+        "disabled":false,
+        "info":""
+    },
+    {
+        "id":"fe7f5a48.d606f8",
+        "type":"udp in",
+        "z":"163dc298.bc503d",
+        "name":"Light Reading from RPi",
+        "iface":"",
+        "port":"2910",
+        "ipv":"udp4",
+        "multicast":"false",
+        "group":"",
+        "datatype":"buffer",
+        "x":100,
+        "y":200,
+        "wires":[["6554a236.73a474","de2b45c2.08be38"]]
+    },
+    {
+        "id":"18bdcad2.f36325",
+        "type":"debug",
+        "z":"163dc298.bc503d",
+        "name":"Display on Debug Screen",
+        "active":false,
+        "tosidebar":true,
+        "console":false,
+        "tostatus":false,
+        "complete":"payload",
+        "x":610,
+        "y":80,
+        "wires":[]
+    },
+    {
+        "id":"6554a236.73a474",
+        "type":"function",
+        "z":"163dc298.bc503d",
+        "name":"Extract UDP Data",
+        "func":"msg.payload={\n    'masterIs': msg.payload[2],\n    'readingFromMaster':(msg.payload[5]*256)+msg.payload[6]\n    \n} \nreturn msg;",
+        "outputs":1,
+        "noerr":0,
+        "x":330,
+        "y":120,
+        "wires":[["18bdcad2.f36325","5db4228c.08f4f4"]]
+    },
+    {
+        "id":"5db4228c.08f4f4",
+        "type":"firebase modify",
+        "z":"163dc298.bc503d",
+        "name":"Light Reading to Firebase",
+        "firebaseconfig":"",
+        "childpath":"RPi Readings",
+        "method":"push",
+        "value":"msg.payload",
+        "priority":"msg.priority",
+        "x":620,
+        "y":160,
+        "wires":[[]]
+    },
+    {
+        "id":"3ceaf1aa.46559e",
+        "type":"slack",
+        "z":"163dc298.bc503d",
+        "name":"Send to Slack",
+        "channelURL":"https://hooks.slack.com/services/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",
+        "username":"ns_bot",
+        "emojiIcon":"",
+        "channel":"",
+        "x":580,
+        "y":280,
+        "wires":[]
+    },
+    {
+        "id":"de2b45c2.08be38",
+        "type":"function",
+        "z":"163dc298.bc503d",
+        "name":"Buffer to String",
+        "func":"msg.payload=\"Master is \"+ msg.payload[2]+ \" and light reading is \"+ (msg.payload[5]*256)+msg.payload[6];\nreturn msg;",
+        "outputs":1,
+        "noerr":0,
+        "x":320,
+        "y":280,
+        "wires":[["3ceaf1aa.46559e"]]
+    }
+]
