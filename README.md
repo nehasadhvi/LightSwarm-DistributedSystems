@@ -15,7 +15,7 @@
 <ul>
   <li>Then I used Node-RED to connect Raspberry Pi to Google Firebase. The data are then sent from Raspberry Pi to Firebase, and saved on a database</li>
   <li>Once they are in the Firebase, we can use any software to access it anytime from anywhere for any purpose. We can also use Node-RED to send some live messages to your phone in real time</li>
-  <li>Here, I am sending data from Firebase whenever the database is updated, to Slack installed on smart phone. The data is also extracted from the Firebase to our laptop for further analysis.</li>
+  <li>Here, I am sending data from Firebase whenever the database is updated, to Slack installed on smart phone. The data is also extracted from the Firebase to our laptop using software written using NodeJS for further analysis.</li>
 </ul>
 
 ## Getting Started
