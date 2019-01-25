@@ -24,12 +24,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 Using SSH -
 ```
-git@github.com:nehasadhvi/LightSwarm-DistributedSystems.git
+git clone git@github.com:nehasadhvi/LightSwarm-DistributedSystems.git
 ```
 
 Using HTTPS -
 ```
-https://github.com/nehasadhvi/LightSwarm-DistributedSystems.git
+git clone https://github.com/nehasadhvi/LightSwarm-DistributedSystems.git
 ```
 
 ### Prerequisites
